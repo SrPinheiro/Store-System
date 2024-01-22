@@ -16,6 +16,12 @@ module LittlePrincess
     # Common ones are `templates`, `generators`, or `middleware`, for example.
     config.autoload_lib(ignore: %w(assets tasks))
 
+    config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+
+    config.before_initialize do
+      puts "Servidor Iniciado em #{Time.now}"
+    end
+
     # Configuration for the application, engines, and railties goes here.
     #
     # These settings can be overridden in specific environments using the files

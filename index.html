@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ptbr">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: blue;
+            height: 100vh;
+        }
+
+        #searchContainer {
+            position: relative;
+            background-color: white;
+            border-radius: 10px 10px 0 0;
+            padding: 1em;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #search {
+            border: none;
+            border-bottom: 1px solid gray;
+            height: 1.5em;
+            width: 10em;
+            outline: none;
+
+        }
+
+        ul {
+            list-style: none;
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5em;
+            margin-top: 1.5em;
+            background-color: white;
+            border-radius: 0 0 10px 10px;
+            left: 0;
+            /* padding: 0 0.17em; */
+            width: 100%;
+        }
+
+        ul :first-child {
+            /* margin-top: 10px; */
+        }
+
+        li button {
+            background-color: transparent;
+            border: none;
+            text-align: left;
+            width: 100%;
+            padding: 0.5em 0;
+        }
+        
+        li button:hover {
+            background-color: gainsboro;
+            cursor: pointer;
+        }
+
+    </style>
+
+
+    <script defer>
+        const lista = document.getElementById("listItemController")
+        
+        function createElement(text) {
+            const li = document.createElement("li")
+            const but = document.createElement("button")
+            but.textContent = text
+
+            li.appendChild(but)
+
+            return li
+        }
+
+        items = ["ola", "mundo", "123"]
+
+
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var meuInput = document.getElementById('search');
+
+            // Adiciona um ouvinte de evento 'input'
+            meuInput.addEventListener('input', function () {
+                // Verifica se o valor do input mudou
+                const lista = document.getElementById("listItemController")
+                let dataInput = meuInput.value
+                lista.innerHTML = ""
+
+                if(dataInput == ""){
+                    console.log("vazio")
+                }else{
+                    items = ["ola", "mundo", "123", "jubileu alcantara", "jonas"]
+                    dataInput = dataInput.trim().toLowerCase()
+                    console.log(dataInput)
+                    let newItems = items.filter((item) => item.includes(dataInput))
+                    console.log(newItems)
+
+                    for(let item of newItems){
+                        lista.appendChild(createElement(item))
+                    }
+
+                }
+            });
+        });
+        
+    </script>
+</head>
+<body>
+    <div id="searchContainer">
+        <input type="text" id="search">
+        <ul id="listItemController">
+        </ul>
+    </div>
+</body>
+</html>

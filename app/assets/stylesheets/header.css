@@ -1,0 +1,21 @@
+#headerComponent{
+    width: 5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--dark-blue);
+    gap: 3em;
+
+}
+
+#headerComponent svg {
+    fill: white;
+}
+#headerComponent svg:hover {
+    cursor: pointer;
+    fill: var(--positive-action)
+}
+
+#headerComponent > *:hover {
+}

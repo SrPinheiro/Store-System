@@ -1,0 +1,198 @@
+#dashboardContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#dashBoardPageHeader {
+    width: 100%;
+    height: 4em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 0px 20px 0px gray;
+}
+
+#dashboardPageHeaderTitleContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#dashboardPageHeaderTitle {
+    font-family: 'Lemon', serif;
+    
+    > span {
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 0.5em;
+        font-weight: light;
+    }
+}
+
+#dashboardMainContent {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    /* background-color: red; */
+}
+
+#dashboardMenu {
+    height: 100%;
+    width: 30%;
+    min-width: 5em;
+    /* background-color: green; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4em
+}
+
+.dashboardMenuInformation {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 4em;
+    width: 80%;
+    border-radius: 10px;
+    padding: 10px;
+    border: 1px solid gray;
+
+    > * {
+        display: flex;
+        align-items: center;
+        color: gray;
+    }
+}
+
+.dashboardMenuInformationHeader {
+    justify-content: flex-start;
+    height: 30%;
+    border-bottom: 1x solid gray;
+}
+
+.dashboardMenuInformationContent {
+    font-size: 2em;
+    height: 70%;
+    justify-content: flex-end;
+}
+
+#dashBoardSearchContainer {
+    /* background-color: aqua; */
+    width: 100%;
+    height: 3em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+#clearSearchIcon {
+    height: auto;
+    width: 1.1em;
+    fill: black;
+}
+#clearSearchIcon:hover {
+    fill: brown;
+    cursor: pointer
+}
+
+#searchItensDashboard {
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    background-color: white;
+    border-radius: 0 0 10px 10px;
+    > * {
+        width: 100%;
+    }
+}
+#searchItensDashboard li button {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    padding: 0.3em 1em;
+    outline: none;
+    text-align: left;
+}
+
+#searchItensDashboard li button:hover {
+    background-color: gainsboro;
+    cursor: pointer;
+}
+
+#dashboardSearchItem {
+    border: none;
+    outline: none;
+    width: 100%;
+    border-bottom: 1px solid gray;
+    padding: 0.5em 1em;
+    background-color: transparent;
+}
+
+#dashboardItemMenu {
+    /* background-color: aqua; */
+    height: 100%;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#dashboardItemContainer {
+    width: 80%;
+    height: 90%;
+    border-radius: 10px;
+    margin-top: 1em;
+    display: flex;
+    flex-direction: column;
+
+    border: 1px solid gray;
+}
+
+#itemContainerContent {
+    height: 90%;
+    border-radius: 10px 10px 0 0;
+
+}
+
+#itemContainerFooter {
+    border-top: 1px solid gray;
+    height: 10%;
+    border-radius: 0 0 10px 10px;
+
+}
+
+#dashboardFooterContent {
+    height: 5em;
+    width: 100%;
+    border-top: 1px solid gray;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5em;
+}
+
+.dashboardFooterButton {
+    background-color: transparent;
+    font-size: 1em;
+    border: 1px solid gray;
+    padding: 0.7em 3em;
+    border-radius: 10px;
+}
+
+.dashboardFooterButton:hover {
+    background-color: gainsboro;
+    cursor: pointer;
+}
